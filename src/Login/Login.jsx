@@ -9,11 +9,11 @@ const Login = () => {
 
   const handleModal = () => {
     setModal(!modal);
-    setInput(""); // Limpa o campo de entrada quando o modal é fechado
+    setInput("");
   };
 
   const handlePassword = () => {
-    if (input === "" || !input.includes("@")) {
+    if (input === "" || !input.includes("@")  || !input.includes(".com") ) {
       alert("Digite um email válido!");
       setInput("");
     } else {
@@ -62,6 +62,7 @@ const Login = () => {
         <div>
           <div className="fundo-modal" onClick={handleModal}></div>
           <div className="nova-senha">
+            <h1>Esqueceu sua senha?</h1>
             <input
               type="email"
               placeholder="Digite aqui seu email"
