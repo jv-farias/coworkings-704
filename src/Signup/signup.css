@@ -85,3 +85,50 @@
         }
     }
 }
+
+@media (max-width: 975px) {
+    .registrar-left {
+        display: none;
+    }
+
+    .registrar-right {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .formulario-registrar {
+        input {
+            width: 350px;
+        }
+
+        button {
+            width: 350px;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .formulario-registrar {
+        input {
+            width: 270px;
+        }
+
+        button {
+            width: 270px;
+        }
+    }
+}
+
+@media (max-width: 295px) {
+    .formulario-registrar {
+        input {
+            width: 240px;
+        }
+
+        button {
+            width: 240px;
+        }
+    }
+}
