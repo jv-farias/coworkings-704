@@ -1,6 +1,6 @@
 .registrar {
-    background: rgb(43,115,186);
-    background: radial-gradient(circle, rgba(43,115,186,1) 0%, rgba(29,72,114,1) 100%);
+    background: rgb(43, 115, 186);
+    background: radial-gradient(circle, rgba(43, 115, 186, 1) 0%, rgba(29, 72, 114, 1) 100%);
     height: 100vh;
     display: flex;
     position: relative;
@@ -58,7 +58,7 @@
         padding-bottom: 10px;
     }
 
-    button {
+    .button-submit {
         width: 400px;
         height: 55px;
         font-size: 18px;
@@ -103,7 +103,7 @@
             width: 350px;
         }
 
-        button {
+        .button-submit {
             width: 350px;
         }
     }
@@ -115,7 +115,7 @@
             width: 270px;
         }
 
-        button {
+        .button-submit {
             width: 270px;
         }
     }
@@ -127,7 +127,7 @@
             width: 240px;
         }
 
-        button {
+        .button-submit {
             width: 240px;
         }
     }

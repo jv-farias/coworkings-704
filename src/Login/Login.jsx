@@ -17,10 +17,10 @@ const Login = () => {
 
   const handlePassword = () => {
     if (input === "" || !input.includes("@")  || !input.includes(".com") ) {
-      toast("Digite um email válido!");
+      toast.error("Digite um email válido!");
       setInput("");
     } else {
-      toast("Email enviado com sucesso, verifique sua caixa de entrada! ✅");
+      toast.success("Email enviado com sucesso, verifique sua caixa de entrada! ✅");
       setInput("");
       setModal(false)
     }
@@ -63,6 +63,19 @@ const Login = () => {
 
       {modal && (
         <div>
+           <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            />
+            
           <div className="fundo-modal" onClick={handleModal}></div>
           <div className="nova-senha">
             <h1>Esqueceu sua senha?</h1>
