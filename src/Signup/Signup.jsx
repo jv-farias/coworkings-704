@@ -12,6 +12,7 @@ const Signup = () => {
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
 
   const cliqueForm = (event) => {
     event.preventDefault();
@@ -28,16 +29,19 @@ const Signup = () => {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
+      });
     } else if (password.length < 8) {
       toast.error('Sua senha precisa ter no mínimo 8 caracteres')
     } else if (!email.includes('@') || !email.includes('.com')) {
       toast.error("Digite um email válido")
+    } else if  (password !== confirmPassword) {
+      toast.error("As senhas devem coincidir")
     } else {
       toast.success("Cadastro efetuado com sucesso! ✅")
       setEmail('')
       setNome('')
       setPassword('')
+      setConfirmPassword('')
     }
   }
 
@@ -79,7 +83,16 @@ const Signup = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="button-submit"  onClick={verificarInputs}>Criar conta</button>
+
+          <label>Repita a sua senha</label>
+          <input
+            type="password"
+            placeholder="Crie sua senha"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+
+          <button className="button-submit" onClick={verificarInputs}>Criar conta</button>
 
           <p className="fazer-login">
             Já possui conta? <Link className="link-registrar" to="/">Clique aqui!</Link>
@@ -95,8 +108,8 @@ const Signup = () => {
             draggable
             pauseOnHover
             theme="dark"
-            />
-            
+          />
+
         </form>
       </div>
 
