@@ -44,7 +44,7 @@
     flex-direction: column;
 
     input {
-        width: 350px;
+        width: 400px;
         height: 55px;
         border-radius: 7px;
         border: none;
@@ -59,7 +59,7 @@
     }
 
     button {
-        width: 350px;
+        width: 400px;
         height: 55px;
         font-size: 18px;
         border-radius: 7px;
