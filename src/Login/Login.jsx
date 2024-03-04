@@ -3,6 +3,8 @@ import fotoCoworking from "../assets/coworking.png";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const [modal, setModal] = useState(false);
@@ -15,10 +17,10 @@ const Login = () => {
 
   const handlePassword = () => {
     if (input === "" || !input.includes("@")  || !input.includes(".com") ) {
-      alert("Digite um email válido!");
+      toast("Digite um email válido!");
       setInput("");
     } else {
-      alert("Email enviado com sucesso, verifique sua caixa de entrada! ✅");
+      toast("Email enviado com sucesso, verifique sua caixa de entrada! ✅");
       setInput("");
       setModal(false)
     }

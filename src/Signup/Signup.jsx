@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import fotoCoworking2 from "../assets/coworking2.png";
 import './signup.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
 
@@ -17,13 +19,13 @@ const Signup = () => {
 
   const verificarInputs = () => {
     if(nome === '' || email === '' || password === '') {
-      alert("Você precisa preencher todos os campos!")
+      toast("Você precisa preencher todos os campos!")
     } else if(password.length < 8) {
-      alert('Sua senha precisa ter no mínimo 8 caracteres')
+      toast('Sua senha precisa ter no mínimo 8 caracteres')
     } else if(!email.includes('@') || !email.includes('.com') ) {
-      alert("Digite um email válido")
+      toast("Digite um email válido")
     } else {
-      alert("Cadastro efetuado com sucesso! ✅")
+      toast("Cadastro efetuado com sucesso! ✅")
       setEmail('')
       setNome('')
       setPassword('')
@@ -73,6 +75,18 @@ const Signup = () => {
           <p className="fazer-login">
             Já possui conta? <Link className="link-registrar" to="/">Clique aqui!</Link>
           </p>
+          <ToastContainer 
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
         </form>
       </div>
 
