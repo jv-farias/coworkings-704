@@ -1,9 +1,10 @@
-import Login from './Login/Login'
+import AppRoutes from "./AppRoutes"
+
 
 const App = () => {
   return (
     <div>
-      <Login />
+      <AppRoutes />
     </div>
   )
 }

@@ -1,0 +1,87 @@
+.registrar {
+    background: rgb(43,115,186);
+    background: radial-gradient(circle, rgba(43,115,186,1) 0%, rgba(29,72,114,1) 100%);
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.registrar-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55vw;
+    height: 100%;
+    background-color: white;
+}
+
+.img-coworking img {
+    width: 500px;
+    border-radius: 20px;
+}
+
+.headline {
+    padding-top: 25px;
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+}
+
+.registrar-right {
+    width: 45vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulario-registrar {
+    color: white;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        width: 350px;
+        height: 55px;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        padding-left: 25px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    label {
+        padding-bottom: 10px;
+    }
+
+    button {
+        width: 350px;
+        height: 45px;
+        font-size: 18px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        background-color: white;
+        color: #042a51;
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #042a51;
+        color: white;
+    }
+
+    .fazer-login {
+        text-align: center;
+        color: white;
+        margin-top: 70px;
+
+        .link-registrar {
+            color: rgb(63, 181, 255);
+        }
+    }
+}

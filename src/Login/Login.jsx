@@ -1,6 +1,7 @@
 import "./login.css";
 import fotoCoworking from "../assets/coworking.png";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png";
 
 const Login = () => {
@@ -17,7 +18,7 @@ const Login = () => {
       alert("Digite um email válido!");
       setInput("");
     } else {
-      alert("Email enviado com sucesso ✅");
+      alert("Email enviado com sucesso, verifique sua caixa de entrada! ✅");
       setInput("");
       setModal(false)
     }
@@ -41,10 +42,10 @@ const Login = () => {
         </div>
         <form className="formulario-login" onClick={cliqueForm}>
           <label className="email-login">Email</label>
-          <input type="email" placeholder="Digite seu e-mail" />
+          <input type="email" placeholder="Digite seu e-mail" required />
 
           <label className="email-senha">Senha</label>
-          <input type="password" placeholder="Digite sua senha" />
+          <input type="password" placeholder="Digite sua senha" required />
 
           <button>Login</button>
 
@@ -53,7 +54,7 @@ const Login = () => {
           </a>
 
           <p className="criar-conta">
-            É novo por aqui? <a href="">Crie sua conta</a>
+            É novo por aqui? <Link className="link-login" to="/registrar">Crie sua conta</Link>
           </p>
         </form>
       </div>
