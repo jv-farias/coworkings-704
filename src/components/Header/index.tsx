@@ -5,9 +5,9 @@ import { Button } from "../ui/button";
 import logoCoworking from "../../assets/logo.png"
 
 
-const Header = () => {
+export const Header = () => {
     return (
-        <Card className="bg-gray-700" >
+        <Card className="w-full bg-gray-300" >
             <CardContent className="p-5 flex justify-between items-center flex-row">
                 <a href="/" >
                     <img src={logoCoworking} alt="" className="w-[120px]" />
