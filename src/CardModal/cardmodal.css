@@ -1,5 +1,5 @@
 .cards {
-  overflow-x: hidden !important;
+  overflow-x: hidden;
   height: auto;
   transition: height 0.3s ease;
   margin-top: 50px;
@@ -95,6 +95,6 @@
 
   .cards-container {
     width: 100vw;
-    overflow: hidden;
+    overflow-x: scroll;
   }
 }
