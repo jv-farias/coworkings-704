@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.search-input {
+    width: 85vw;
+    padding: .75rem;
+    border-radius: .5rem;
+    margin-top: 1.5rem;
+    color:#878787;
+    border: .125rem solid #D6D6D6;
+    outline: none;
+    font-size: 14px;
+}
+
+.modal-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}

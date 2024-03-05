@@ -1,19 +1,39 @@
 import axios from "axios"
+import { Header } from "../Header/header";
+import "./home.css"
+import { useEffect, useState } from "react";
+
 
 
 export const Home = () => {
 
-    
-    axios.get('http://localhost:3000/salas')
-        .then(resp => {
-            console.log(resp);
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+      axios.get('http://localhost:3000/salas')
+        .then(response => {
+          setData(response.data);
         })
         .catch(error => {
-            console.error(error);
+          console.error(error);
         });
+    }, []);
+
+
     return (
-        <div>
-   
+        <div className="container" >
+            <Header />
+            
+            <input className="search-input" type="text" name="search" id="" placeholder= "Faça a sua pesquisa"
+            />
+            <div className="modal-cards" >
+                <h2>Salas de Coworking</h2>
+                {data.map(item => (
+      <div key={item.id}>{item.name}</div>
+    ))}
+
+            </div>
         </div>
     )
 }
