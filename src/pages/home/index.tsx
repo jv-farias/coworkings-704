@@ -23,7 +23,7 @@ export const Home = () => {
     }, []);
 
     return (
-        <div>
+        <div className="bg-zinc-50">
             <Header />
             <div className="px-5 mt-6">
                 <Search />

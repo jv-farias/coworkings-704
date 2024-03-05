@@ -15,14 +15,14 @@ export const CardItem = ({ id, name, description, imageUrl, hours }: CardItemPro
 
     return (
         <Card key={id} className="bg-neutral-50 border-2 border-zinc-200 min-w-[300px] max-w-[300px] rounded-2xl">
-            <CardContent className="flex flex-col gap-3 px-1 py-0">
+            <CardContent className="flex flex-col gap-3 px-2 py-0">
                 <div className="flex w-full h-[200px] ">
                     <img
                         src={imageUrl}
                         className="shadow-sm rounded-2xl py-1 w-full object-cover"
                         alt={name} />
                 </div>
-                <div className="flex justify-center items-center gap-[0.350rem] flex-wrap mt-1" >
+                <div className="flex justify-center items-center gap-[0.200rem] flex-wrap mt-1" >
                     {hours.map((hour, index) => (
                         <Button
                             variant="default" key={index}>{hour.time}</Button>
