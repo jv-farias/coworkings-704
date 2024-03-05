@@ -41,7 +41,7 @@ export const Home = () => {
                                     </Avatar>
                                     <p className="font-bold " >Sala de Workshop</p>
                                 </div>
-                                <div className="flex ml-2 items-center border-l-2 border-solid border-secondary px-3 gap-1 flex-1 ">
+                                <div className="flex ml-2 items-center border-l-2 border-solid border-secondary px-3 gap-2 flex-1 ">
                                     <p className="text-lg">19/Março - 11:00</p>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ export const Home = () => {
                 </Card>
             </div>
             <h1 className="px-5 mt-6 font-bold text-sm" >RECOMENDADOS</h1>
-            <div className="mt-2 px-5 flex gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden " >
+            <div className="p-6 gap-4 mt-2 px-5 flex flex-wrap justify-evenly overflow-x-auto [&::-webkit-scrollbar]:hidden " >
                 {data.map((item) => (
                     <CardItem
                         description={item.description}
