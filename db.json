@@ -1,0 +1,131 @@
+{
+    "salas": [
+      {
+        "id": 1,
+        "name": "Sala de Reunião",
+        "description": "Uma sala equipada para reuniões produtivas.",
+        "image": "https://example.com/sala-reuniao.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Sala de Workshop",
+        "description": "Um espaço versátil para workshops e palestras.",
+        "image": "https://example.com/sala-workshop.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Sala de Festas",
+        "description": "Um ambiente aconchegante para eventos e celebrações.",
+        "image": "https://example.com/sala-festas.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Sala de Treinamento",
+        "description": "Ideal para treinamentos corporativos e workshops especializados.",
+        "image": "https://example.com/sala-treinamento.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Sala de Conferências",
+        "description": "Perfeita para conferências e apresentações de alto nível.",
+        "image": "https://example.com/sala-conferencias.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Sala de Criatividade",
+        "description": "Um espaço inspirador para brainstorming e desenvolvimento de ideias.",
+        "image": "https://example.com/sala-criatividade.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Sala de Estudos",
+        "description": "Um ambiente tranquilo para estudos individuais e em grupo.",
+        "image": "https://example.com/sala-estudos.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Sala de Podcast",
+        "description": "Um estúdio equipado para gravações de podcasts e transmissões ao vivo.",
+        "image": "https://example.com/sala-podcast.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Sala de Relaxamento",
+        "description": "Um espaço acolhedor para relaxar e recarregar as energias.",
+        "image": "https://example.com/sala-relaxamento.jpg",
+        "hours": [
+          {"time": "08:00"},
+          {"time": "10:00"},
+          {"time": "12:00"},
+          {"time": "14:00"},
+          {"time": "16:00"},
+          {"time": "18:00"}
+        ]
+      }
+    ]
+  }
+  
