@@ -92,7 +92,7 @@ export const Cadastro = () => {
                         />
                     </div>
 
-                    <div className="flex flex-col " >
+                    <div className="flex flex-col" >
                         <label className="text-white pb-1">Repita a sua senha</label>
                         <input
                             type="password"
