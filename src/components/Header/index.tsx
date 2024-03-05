@@ -7,7 +7,7 @@ import logoCoworking from "../../assets/logo.png"
 
 export const Header = () => {
     return (
-        <Card className="w-full bg-slate-400 rounded-none" >
+        <Card className="w-full bg-cyan-600 rounded-none" >
             <CardContent className="p-5 flex justify-between items-center flex-row">
                 <a href="/" >
                     <img src={logoCoworking} alt="" className="w-[120px]" />
