@@ -1,3 +1,4 @@
+// CardModal.js
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./cardmodal.css";
@@ -31,7 +32,7 @@ const CardModal = () => {
             <img src={dado.image} alt="img" />
             <h1>{dado.name}</h1>
             <p>{dado.description}</p>
-            <div className="horarios">
+            <div className={`horarios ${activeCard === dado.id ? 'horarios_open' : ''}`}>
               {dado.hours.map((hora, index) => (
                 <div key={index} className="horario">
                   <p>{hora.time}</p>

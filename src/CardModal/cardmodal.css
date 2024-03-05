@@ -7,7 +7,7 @@
         transition: height 0.3s ease;
         margin-top: 50px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         width: 100vw;
         gap: 50px;
@@ -56,6 +56,10 @@
     }
 
     .horarios {
+        display: none;
+    }
+
+    .horarios_open {
         display: flex;
         gap: 10px;
         justify-content: center;
