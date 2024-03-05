@@ -98,3 +98,40 @@
     overflow-x: scroll;
   }
 }
+
+@media (max-width: 380px) {
+  .infos {
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .infos img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+}
+
+@media (max-width: 325px) {
+  .infos {
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .infos img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+}
+

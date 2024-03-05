@@ -1,17 +1,15 @@
-// CardModal.js
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import "./cardmodal.css";
-import { FaArrowDown } from "react-icons/fa6";
-import { FaArrowUp } from "react-icons/fa";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './cardmodal.css';
+import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 
-const CardModal = () => {
+const CardModal = ({ searchTerm }) => {
   const [dados, setDados] = useState([]);
   const [activeCard, setActiveCard] = useState(null);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/salas")
+      .get('http://localhost:3000/salas')
       .then((resp) => {
         setDados(resp.data);
       })
@@ -24,10 +22,14 @@ const CardModal = () => {
     setActiveCard(activeCard === id ? null : id);
   };
 
+  const filteredData = dados.filter((dado) => {
+    return dado.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
   return (
     <div className="cards-container">
       <div className="cards">
-        {dados.map((dado) => (
+        {filteredData.map((dado) => (
           <div key={dado.id} className={`infos ${activeCard === dado.id ? 'modal-open' : ''}`}>
             <img src={dado.image} alt="img" />
             <h1>{dado.name}</h1>
