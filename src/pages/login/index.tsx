@@ -5,10 +5,33 @@ import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 export const Login = () => {
     const [modal, setModal] = useState(false);
     const [input, setInput] = useState("");
+    const [login, setLogin] = useState("");
+    const [senha, setSenha] = useState("");
+
+    const submitLogin = async () => {
+        try {
+            const response = await axios.get("http://localhost:3000/users");
+            if (login === response.data[2].email && senha === response.data[2].password) {
+                console.log('deu certo')
+                window.location.href = '/home'
+            } else if (login === '' || senha === '') {
+                toast.error("Você precisa preencher todos os campos!");
+            } else {
+                toast.error("Usuário ou senha incorretos!");
+                setLogin('')
+                setSenha('')
+            }
+        } catch (error) {
+            console.error(error)
+        }
+
+    
+    };
 
     const handleModal = () => {
         setModal(!modal);
@@ -18,18 +41,16 @@ export const Login = () => {
     const handlePassword = () => {
         if (input === "" || !input.includes("@") || !input.includes(".com")) {
             toast.error("Digite um email válido!");
-            setInput("");
         } else {
             toast.success("Email enviado com sucesso, verifique sua caixa de entrada! ✅");
             setInput("");
-            setModal(false)
+            setModal(false);
         }
     };
 
     const cliqueForm = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
     };
-
     return (
         <div className="bg-gradient-to-b from-blue-700 to-blue-900 min-h-screen flex relative">
 
@@ -46,24 +67,24 @@ export const Login = () => {
                 <form className="flex flex-col items-center justify-center" onClick={cliqueForm}>
                     <div className="flex flex-col" >
                         <label className="mb-2 text-white">Email</label>
-                        <input type="email" placeholder="Digite seu e-mail" required className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md" />
+                        <input type="email" placeholder="Digite seu e-mail" required className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md" value={login} onChange={(e) => setLogin(e.target.value)} />
                     </div>
                     <div className="flex flex-col" >
 
                         <label className="mb-2 text-white">Senha</label>
-                        <input type="password" placeholder="Digite sua senha" required className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md" />
+                        <input type="password" placeholder="Digite sua senha" required className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md" value={senha} onChange={(e) => setSenha(e.target.value)} />
                     </div>
 
 
                     <button className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md bg-white 
-                    hover:bg-blue-300">Login</button>
+                    hover:bg-blue-300" onClick={submitLogin} >Login</button>
 
                     <a href="" className="esqueceu-senha text-white place-items-end" onClick={handleModal}>
                         Esqueceu sua senha?
                     </a>
 
                     <p className="criar-conta text-white mt-10">
-                        É novo por aqui? 
+                        É novo por aqui?
                         <Link className="link-login text-blue-400" to="/cadastro">Crie sua conta</Link>
                     </p>
                 </form>
