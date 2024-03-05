@@ -18,7 +18,7 @@ const Home = () => {
         placeholder="Faça a sua pesquisa"
       />
       <div className="modal-cards">
-
+        <h1 className="salas">Salas Disponíveis!</h1>
         <CardModal />
       </div>
     </div>
