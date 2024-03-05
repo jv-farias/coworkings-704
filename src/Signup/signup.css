@@ -17,13 +17,13 @@
 }
 
 .img-coworking img {
-    width: 500px;
+    width: 550px;
     border-radius: 20px;
 }
 
 .headline {
-    padding-top: 25px;
-    font-size: 30px;
+    padding-top: 22px;
+    font-size: 22px;
     color: white;
     font-weight: 500;
 }
@@ -45,7 +45,7 @@
 
     input {
         width: 400px;
-        height: 55px;
+        height: 50px;
         border-radius: 7px;
         border: none;
         outline: none;
@@ -60,7 +60,7 @@
 
     .button-submit {
         width: 400px;
-        height: 55px;
+        height: 50px;
         font-size: 18px;
         border-radius: 7px;
         border: none;
@@ -78,7 +78,8 @@
     .fazer-login {
         text-align: center;
         color: white;
-        margin-top: 70px;
+        margin-top: 30px;
+        margin-bottom: 30px;
 
         .link-registrar {
             color: rgb(63, 181, 255);
