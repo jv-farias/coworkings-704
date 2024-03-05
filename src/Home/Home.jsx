@@ -1,11 +1,11 @@
 import axios from "axios"
-import { Header } from "../Header/header";
+import { Header } from "../Header/Header";
 import "./home.css"
 import { useEffect, useState } from "react";
 
 
 
-export const Home = () => {
+ const Home = () => {
 
 
     const [data, setData] = useState([]);
@@ -37,3 +37,5 @@ export const Home = () => {
         </div>
     )
 }
+
+export default Home;
