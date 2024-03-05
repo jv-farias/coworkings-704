@@ -1,5 +1,5 @@
-import { MenuIcon } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { HomeIcon, LogInIcon, MenuIcon } from "lucide-react";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import logoCoworking from "../../assets/logo.png"
@@ -8,6 +8,7 @@ import logoCoworking from "../../assets/logo.png"
 export const Header = () => {
     return (
         <Card className="w-full bg-cyan-600 rounded-none" >
+        <Card className="w-full bg-gray-300 rounded-b-md rounded-t-none border-no" >
             <CardContent className="p-5 flex justify-between items-center flex-row">
                 <a href="/" >
                     <img src={logoCoworking} alt="" className="w-[120px]" />
@@ -19,8 +20,28 @@ export const Header = () => {
                         </Button>
                     </SheetTrigger>
 
-                    <SheetContent className="p-0">
-
+                    <SheetContent>
+                        <SheetHeader>
+                            <SheetTitle>Olá, faça seu login!</SheetTitle>
+                            <SheetDescription className="flex flex-col gap-3" >
+                                <div className="flex flex-col gap-3 ">
+                                    <Button variant="outline" className="justify-start" asChild>
+                                        <a href="/login">
+                                            <LogInIcon size={18} className="mr-2" />
+                                            Fazer Login
+                                        </a>
+                                    </Button>
+                                </div>
+                                <div className="flex flex-col gap-3 ">
+                                    <Button variant="outline" className="justify-start" asChild>
+                                        <a href="/">
+                                            <HomeIcon size={18} className="mr-2" />
+                                            Início
+                                        </a>
+                                    </Button>
+                                </div>
+                            </SheetDescription>
+                        </SheetHeader>
                     </SheetContent>
                 </Sheet>
             </CardContent>
