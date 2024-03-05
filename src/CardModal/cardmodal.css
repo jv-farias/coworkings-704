@@ -76,3 +76,24 @@
     .horario:hover {
         background-color: #154779;
     }
+
+
+@media (max-width: 735px) {
+    .cards {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 1rem;
+        padding-right: 2rem;
+        gap: 1rem;
+        overflow-x:scroll;
+        flex-wrap: nowrap;
+        padding-bottom: 2rem;
+      
+    }
+
+    .cards-container {
+        width: 100vw;
+        overflow: hidden;
+    
+    }
+}
