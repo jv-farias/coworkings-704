@@ -2,6 +2,7 @@ import axios from "axios";
 import { Header } from "../Header/Header";
 import "./home.css";
 import { useEffect, useState } from "react";
+import CardModal from "../CardModal/CardModal";
 
 const Home = () => {
 
@@ -17,8 +18,8 @@ const Home = () => {
         placeholder="Faça a sua pesquisa"
       />
       <div className="modal-cards">
-        <h2>Salas de Coworking</h2>
-        
+
+        <CardModal />
       </div>
     </div>
   );

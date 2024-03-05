@@ -1,9 +1,12 @@
 import axios from "axios";
-import React from "react";
-import './cardmodal.css'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import "./cardmodal.css";
+import { FaArrowDown } from "react-icons/fa6";
+import { FaArrowUp } from "react-icons/fa";
+
 const CardModal = () => {
   const [dados, setDados] = useState([]);
+  const [activeCard, setActiveCard] = useState(null);
 
   useEffect(() => {
     axios
@@ -16,27 +19,30 @@ const CardModal = () => {
       });
   }, []);
 
-  return (
-    <div>
-      {/* {dados.map((dado, index) => (
-        <div key={index}>
-          <h1>{dado.name}</h1>
-        </div>
-      ))} */}
+  const handleModal = (id) => {
+    setActiveCard(activeCard === id ? null : id);
+  };
 
-      <div className="card">
-        <div className="infos">
-          <img
-            src="https://fastly.picsum.photos/id/791/200/200.jpg?hmac=bPVayqOX5aUzsnsX99AgWaxWB3WzWqwaiSDJ-lNHUk4"
-            alt="img"
-          />
-          <h1>Salão de Eventos</h1>
-          <p>
-            Capacidade para até 150 pessoas. Ar condicionado, WIFI, Sistema de
-            som e imagem, Flip chart com cavalete, Microfone sem fio, Microfone
-            lapela, Serviço de coffee break.
-          </p>
-        </div>
+  return (
+    <div className="cards-container">
+      <div className="cards">
+        {dados.map((dado) => (
+          <div key={dado.id} className={`infos ${activeCard === dado.id ? 'modal-open' : ''}`}>
+            <img src={dado.image} alt="img" />
+            <h1>{dado.name}</h1>
+            <p>{dado.description}</p>
+            <div className="horarios">
+              {dado.hours.map((hora, index) => (
+                <div key={index} className="horario">
+                  <p>{hora.time}</p>
+                </div>
+              ))}
+            </div>
+            <button className="button_arrow" onClick={() => handleModal(dado.id)}>
+              {activeCard === dado.id ? <FaArrowUp className="arrow_up" /> : <FaArrowDown className="arrow_down" />}
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
