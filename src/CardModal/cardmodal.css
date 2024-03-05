@@ -1,0 +1,31 @@
+.card {
+    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.infos {
+    width: 280px;
+    width: 100%;
+}
+
+.infos img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.infos h1 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.infos p {
+    padding: 10px 20px;
+}
