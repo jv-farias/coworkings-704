@@ -8,13 +8,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
-export const Home = () => {
-    const [data, setData] = useState<Coworking[]>([]);
 
+
+export const Home = () => {
+    
+    const [data, setData] = useState<Coworking[]>([]);
     useEffect(() => {
         axios
-            .get<Coworking[]>("http://localhost:3000/coworkings")
-            .then((resp) => {
+        .get<Coworking[]>("http://localhost:3000/coworkings")
+        .then((resp) => {
                 setData(resp.data);
             })
             .catch((error: AxiosError) => {
@@ -22,6 +24,7 @@ export const Home = () => {
             });
     }, []);
 
+    
     return (
         <div className="bg-zinc-50">
             <Header />
