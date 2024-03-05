@@ -5,10 +5,21 @@ import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 const Login = () => {
   const [modal, setModal] = useState(false);
   const [input, setInput] = useState("");
+  const [login, setLogin] = useState("")
+  const [senha, setSenha] = useState("")
+
+  const submitLogin = async () => {
+    const response = await axios.get("http://localhost:3000/usuarios")
+    if(login === response.data[1].email && senha === response.data[1].password ) {
+        window.location.href = '/home';
+    }
+
+  }
 
   const handleModal = () => {
     setModal(!modal);
@@ -44,12 +55,23 @@ const Login = () => {
         </div>
         <form className="formulario-login" onClick={cliqueForm}>
           <label className="email-login">Email</label>
-          <input type="email" placeholder="Digite seu e-mail" required />
+          <input
+          type="email"
+          placeholder="Digite seu e-mail"
+          value={login}
+          onChange={(e) => setLogin(e.target.value)}
+          required />
 
           <label className="email-senha">Senha</label>
-          <input type="password" placeholder="Digite sua senha" required />
+          <input 
+          type="password" 
+          placeholder="Digite sua senha" 
+          required 
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+          />
 
-          <button>Login</button>
+          <button onClick={submitLogin}>Login</button>
 
           <a href="" className="esqueceu-senha" onClick={handleModal}>
             Esqueceu sua senha?

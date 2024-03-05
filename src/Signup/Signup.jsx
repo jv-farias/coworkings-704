@@ -6,6 +6,7 @@ import fotoCoworking2 from "../assets/coworking2.png";
 import './signup.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 const Signup = () => {
 
@@ -14,11 +15,8 @@ const Signup = () => {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
-  const cliqueForm = (event) => {
+  const cliqueForm = async (event) => {
     event.preventDefault();
-  };
-
-  const verificarInputs = () => {
     if (nome === '' || email === '' || password === '') {
       toast.error('Você precisa preencher todos os campos!', {
         position: "top-right",
@@ -37,13 +35,21 @@ const Signup = () => {
     } else if  (password !== confirmPassword) {
       toast.error("As senhas devem coincidir")
     } else {
+
+      await axios.post('http://localhost:3000/usuarios', {
+        nome,
+        email,
+        password,
+      });
+
       toast.success("Cadastro efetuado com sucesso! ✅")
       setEmail('')
       setNome('')
       setPassword('')
       setConfirmPassword('')
     }
-  }
+  };
+
 
   return (
     <div className="registrar">
@@ -59,7 +65,7 @@ const Signup = () => {
           <img src={logo} alt="logo 704apps" />
         </div>
         <h1 className="headline">Crie sua conta</h1>
-        <form className="formulario-registrar" onSubmit={cliqueForm}>
+        <form className="formulario-registrar">
           <label>Nome</label>
           <input
             type="text"
@@ -92,7 +98,7 @@ const Signup = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
 
-          <button className="button-submit" onClick={verificarInputs}>Criar conta</button>
+          <button className="button-submit" onClick={cliqueForm}>Criar conta</button>
 
           <p className="fazer-login">
             Já possui conta? <Link className="link-registrar" to="/">Clique aqui!</Link>
