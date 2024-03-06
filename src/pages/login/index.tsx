@@ -63,47 +63,47 @@ export const Login = () => {
     <div className="bg-gradient-to-b from-blue-700 to-blue-900 min-h-screen flex relative">
       <div className="h-[100vh] hidden md:flex items-center justify-center flex-col w-1/2  bg-white">
         <div className="img-coworking">
-          <img src={fotoCoworking} alt="Foto Coworking" className="max-w-lg" />
+          <img src={fotoCoworking} alt="Foto Coworking" className="w-[600px]" />
         </div>
       </div>
 
       <div className="login-right w-full md:w-1/2 flex items-center justify-center flex-col">
         <div className="img-logo">
-          <img src={logo} alt="logo 704apps" className="w-60 mt-5 mb-10" />
+          <img src={logo} alt="logo 704apps" className="w-40 mt-5 mb-10" />
         </div>
-        <form
-          className="flex flex-col items-center justify-center"
+        <form 
+          className="flex flex-col items-center justify-center w-full xl:px-40 lg:px-20 md:px-10 sm: px-5 "
           onClick={cliqueForm}
         >
-          <div className="flex flex-col">
+          <div className="flex flex-col w-[95%]">
             <label className="mb-2 text-white">Email</label>
-            <input
+            <Input
               type="email"
               placeholder="Digite seu e-mail"
               required
-              className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md"
+              className="rounded-md border-none outline-none pl-5 mb-5 text-md"
               value={login}
               onChange={(e) => setLogin(e.target.value)}
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col w-[95%]">
             <label className="mb-2 text-white">Senha</label>
-            <input
+            <Input
               type="password"
               placeholder="Digite sua senha"
               required
-              className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md"
+              className="rounded-md border-none outline-none pl-5 mb-5 text-md"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
             />
           </div>
-          <button
-            className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md bg-white 
-                    hover:bg-blue-300"
+          <Button
+            className="w-[95%] text-black rounded-md border-none outline-none pl-5 mb-5 text-md bg-white 
+                    hover:bg-blue-300 hover:text-white"
             onClick={submitLogin}
           >
             Login
-          </button>
+          </Button>
           <div className="cursor-pointer">
             <Dialog>
             <ToastContainer

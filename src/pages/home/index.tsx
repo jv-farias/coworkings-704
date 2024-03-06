@@ -26,7 +26,7 @@ export const Home = () => {
 
     
     return (
-        <div className="pb-5 bg-zinc-50">
+        <div className="pb-5 bg-zinc-50 h-screen">
             <Header />
             <div className="px-5 mt-6">
                 <Search />
