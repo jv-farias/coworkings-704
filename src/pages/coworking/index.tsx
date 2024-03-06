@@ -68,7 +68,7 @@ export const Coworking = () => {
             <h3 className="  px-5 py-0 text-2xl font-bold mb-8 text-center">
               Vantagens de trabalhar em um Coworking
             </h3>
-            <div className="m-5 py-2  overflow-x-auto [&::-webkit-scrollbar]:hidden flex flex-wrap items-center gap-24 ">
+            <div className="m-5 py-2 flex justify-center flex-wrap items-center gap-4">
               <Card className="mt-2 min-w-[300px] max-w-[300px] text-center">
                 <CardContent className=" p-4 flex items-center flex-col gap-2">
                   <p className="font-semibold text-lg flex items-center gap-2">
