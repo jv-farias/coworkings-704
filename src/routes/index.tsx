@@ -1,3 +1,4 @@
+import { AdminLogin } from "@/pages/admin/adminLogin"
 import { Cadastro } from "@/pages/cadastro"
 import { Coworking } from "@/pages/coworking"
 import { Home } from "@/pages/home"
@@ -12,6 +13,7 @@ export const AppRoutes = () => {
             <Route path="/login" element={ <Login/> } />
             <Route path="/cadastro" element={ <Cadastro/> } />
             <Route path="/coworking/:id" element={ <Coworking /> } />
+            <Route path="/admin/login" element={ <AdminLogin /> } />
         </Routes>
     )
 }
