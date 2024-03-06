@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import { Card, CardContent } from "@/components/ui/card";
 import axios from "axios";
-import { Lightbulb, MapPin, UsersRound } from "lucide-react"; // Assuming you have Clock icon
+import { Lightbulb, MapPin, UsersRound } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Hour } from "../home/types";
