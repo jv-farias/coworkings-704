@@ -62,7 +62,7 @@ export const Cadastro = () => {
 
             <div className="registrar-left hidden md:flex items-center justify-center flex-col w-1/2 h-full bg-white">
                 <div className="img-coworking">
-                    <img src={fotoCoworking2} alt="Foto Coworking 2" className="w-80 rounded-lg" />
+                    <img src={fotoCoworking2} alt="Foto Coworking 2" className="max-w-lg rounded-xl" />
                 </div>
             </div>
 
