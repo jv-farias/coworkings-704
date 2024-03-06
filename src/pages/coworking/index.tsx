@@ -28,18 +28,18 @@ export const Coworking = () => {
           <h1 className="my-8 text-center text-3xl font-bold px-5 py-4 text-gray-800 ">
             {coworking.name}
           </h1>
-          <div className="flex gap-20 justify-center items-center flex-col md:flex-row">
+          <div className="flex gap-20 justify-between items-center flex-col md:flex-row px-10">
             <img
-              className="rounded-lg md:w-1/2"
+              className="rounded md:w-1/2"
               src={coworking.image}
               alt={coworking.name}
             />
-            <div className="items-start flex flex-col md:w-1/2">
+            <div className="flex flex-col md:w-1/2 items-center">
               <div className="flex items-center justify-center flex-col w-full md:w-1/2">
                 <p className="text-xl font-bold px-5 py-4 text-gray-800 ">
                   {`Agende seu horário:`}
                 </p>
-                <div className="w-1/1 h-1/2 flex flex-wrap justify-center items-start">
+                <div className="flex justify-center flex-wrap items-start gap-1 w-[250px] h-[100px]">
                   {coworking.hours.map((hour: Hour, index: number) => (
                     <Card key={index}>
                       <Button variant="default" key={index}>
@@ -49,12 +49,12 @@ export const Coworking = () => {
                   ))}
                 </div>
               </div>
-              <div className="mt-5 px-5 text-gray-800">
-                <p className="font-semibold text-xl mt-2">
+              <div className="mt-5 text-gray-800">
+                <p className="font-semibold text-xl text-center">
                   {" "}
                   {coworking.description}{" "}
                 </p>
-                <p className="font-normal text-lg mt-2 text-gray-600 ">
+                <p className="font-normal text-lg mt-2 text-gray-600 text-center ">
                   {" "}
                   Expanda sua empresa em um endereço prestigiado no centro da
                   Aldeota, mais precisamente na Rua Nunes Valnte. Encontre um
@@ -65,12 +65,12 @@ export const Coworking = () => {
             </div>
           </div>
           <div className="mt-20 flex justify-center items-center flex-col">
-            <h3 className="  px-5 py-0 text-2xl font-bold mb-8">
+            <h3 className="  px-5 py-0 text-2xl font-bold mb-8 text-center">
               Vantagens de trabalhar em um Coworking
             </h3>
-            <div className="px-5 py-2  overflow-x-auto [&::-webkit-scrollbar]:hidden flex flex-wrap items-center gap-24 ">
-              <Card className="mt-2 min-w-[300px] max-w-[300px]">
-                <CardContent className=" p-4 flex items-start flex-col gap-2">
+            <div className="m-5 py-2  overflow-x-auto [&::-webkit-scrollbar]:hidden flex flex-wrap items-center gap-24 ">
+              <Card className="mt-2 min-w-[300px] max-w-[300px] text-center">
+                <CardContent className=" p-4 flex items-center flex-col gap-2">
                   <p className="font-semibold text-lg flex items-center gap-2">
                     Networking{" "}
                     <span>
@@ -85,8 +85,8 @@ export const Coworking = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="mt-2 min-w-[300px] max-w-[300px]">
-                <CardContent className="p-4 flex items-start flex-col gap-2">
+              <Card className="mt-2 min-w-[300px] max-w-[300px] text-center">
+                <CardContent className="p-4 flex items-center flex-col gap-2">
                   <p className="font-semibold text-lg flex items-center  gap-2">
                     Ambiente
                     <span>
@@ -101,8 +101,8 @@ export const Coworking = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="mt-2 min-w-[300px] max-w-[300px]">
-                <CardContent className=" p-4 flex items-start flex-col gap-2">
+              <Card className="mt-2 min-w-[300px] max-w-[300px] text-center">
+                <CardContent className=" p-4 flex items-center flex-col gap-2">
                   <p className="font-semibold text-lg flex items-center gap-2">
                     Localização
                     <span>
