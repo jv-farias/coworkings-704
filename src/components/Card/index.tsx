@@ -14,7 +14,7 @@ interface CardItemProps {
 export const CardItem = ({ id, name, description, imageUrl, hours }: CardItemProps) => {
 
     return (
-        <Card key={id} className="bg-neutral-50 border-2 border-zinc-200 min-w-[300px] max-w-[300px] rounded-2xl">
+        <Card key={id} className="bg-neutral-50 border-2 border-zinc-200 min-w-[300px] max-w-[300px] rounded-2xl mt-4">
             <CardContent className="flex flex-col gap-3 px-0 py-0">
                 <div className="flex w-full h-[200px] ">
                     <img
