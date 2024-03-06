@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './cardmodal.css';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const CardModal = ({ searchTerm }) => {
   const [dados, setDados] = useState([]);
@@ -41,6 +42,7 @@ const CardModal = ({ searchTerm }) => {
                 </div>
               ))}
             </div>
+            <Link to={`/coworking/${dado.id}`} className='agendar-horario'>Agendar horário</Link>
             <button className="button_arrow" onClick={() => handleModal(dado.id)}>
               {activeCard === dado.id ? <FaArrowUp className="arrow_up" /> : <FaArrowDown className="arrow_down" />}
             </button>
