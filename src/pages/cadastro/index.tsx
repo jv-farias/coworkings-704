@@ -6,6 +6,8 @@ import fotoCoworking2 from "../../assets/coworking2.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios, { AxiosError } from "axios";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const Cadastro = () => {
 
@@ -60,8 +62,8 @@ export const Cadastro = () => {
         <div className="registrar bg-gradient-to-b from-blue-700 to-blue-900 h-screen relative flex">
 
             <div className="registrar-left hidden md:flex items-center justify-center flex-col w-1/2 h-full bg-white">
-                <div className="img-coworking">
-                    <img src={fotoCoworking2} alt="Foto Coworking 2" className="max-w-lg rounded-xl" />
+                <div className="img-coworking p-10">
+                    <img src={fotoCoworking2} alt="Foto Coworking 2" className="w-[500px] rounded-xl" />
                 </div>
             </div>
 
@@ -70,53 +72,54 @@ export const Cadastro = () => {
                     <img src={logo} alt="logo 704apps" className="w-40 mt-5" />
                 </div>
                 <h1 className="pt-5 pb-2 text-white text-lg font-semibold">Crie sua conta</h1>
-                <form className="formulario-registrar flex flex-col items-center justify-center" onSubmit={handleClickForm}>
-                    <div className="flex flex-col" >
+                <form className="formulario-registrar flex flex-col items-center justify-center w-full xl:px-40 lg:px-20 md:px-10 sm:px-5" onSubmit={handleClickForm}>
+                    <div className="flex flex-col w-[90%]" >
                         <label className="text-white pb-1">Nome</label>
-                        <input
+                        <Input
                             type="text"
                             placeholder="Digite seu nome"
                             value={nome}
                             onChange={(e) => setNome(e.target.value)}
-                            className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md"
+                            className=" w-full rounded-md border-none outline-none pl-5 mb-5 text-md"
                         />
                     </div>
 
-                    <div className="flex flex-col " >
+                    <div className="flex flex-col w-[90%]" >
                         <label className="text-white pb-1">Email</label>
-                        <input
+                        <Input
                             type="email"
                             placeholder="Digite seu melhor email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md"
+                            className=" w-full rounded-md border-none outline-none pl-5 mb-5 text-md"
                         />
                     </div>
 
-                    <div className="flex flex-col " >
+                    <div className="flex flex-col w-[90%]" >
                         <label className="text-white pb-1">Senha</label>
-                        <input
+                        <Input
                             type="password"
                             placeholder="Crie sua senha"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md"
+                            className="w-full  rounded-md border-none outline-none pl-5 mb-5 text-md"
                         />
                     </div>
 
-                    <div className="flex flex-col" >
+                    <div className="flex flex-col w-[90%]" >
                         <label className="text-white pb-1">Repita a sua senha</label>
-                        <input
+                        <Input
                             type="password"
                             placeholder="Crie sua senha"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
-                            className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md"
+                            className="w-full rounded-md border-none outline-none pl-5 mb-5 text-md"
                         />
                     </div>
 
-                    <button className="w-[400px] h-[60px] rounded-md border-none outline-none pl-5 mb-5 text-md bg-white 
-                    hover:bg-blue-300" onClick={handleClickForm}>Criar Conta</button>
+                    <Button className="rounded-md border-none outline-none pl-5 mb-5 text-md bg-white  w-[90%] text-black
+                    hover:text-white
+                    hover:bg-blue-300" onClick={handleClickForm}>Criar Conta</Button>
 
                     <p className="text-white mt-5">
                         Já possui conta? <Link className="text-blue-400" to="/login">Clique aqui</Link>
