@@ -6,6 +6,7 @@ import { CardItem } from "@/components/Card";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import { IoMdSearch } from "react-icons/io";
 
 const useDebounce = (value: string, delay: number) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -34,14 +35,13 @@ const Home = () => {
       .get<Coworking[]>("https://api-backend-teste.vercel.app/coworkings")
       .then((resp) => {
         setData(resp.data);
-        setFilteredData(resp.data); // Inicialmente, os dados filtrados são os mesmos que os dados recebidos
+        setFilteredData(resp.data);
       })
       .catch((error: AxiosError) => {
         console.error(error);
       });
   }, []);
 
-  // Função para filtrar os dados com base no termo de pesquisa
   useEffect(() => {
     const filtered = data.filter((item) =>
       item.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
@@ -53,16 +53,18 @@ const Home = () => {
   };
 
   return (
-    <div className="pb-5 bg-zinc-50">
+    <div className="pb-5 bg-zinc-50 flex flex-col items-center">
       <Header />
-      <div className="px-5 mt-6">
+      <div className="px-5 mt-6 border w-[550px] rounded bg-white flex items-center ml-5 font-bold text-center">
         <input
           type="text"
           placeholder="Procure uma sala..."
           value={searchTerm}
           onChange={handleSearch}
-          className="border border-gray-500 rounded-md px-3 py-2 w-2/2 placeholder:font-bold"
-        />
+          className="border border-gray-500 rounded-md px-3 py-2 w-2/2 placeholder:font-bold bg-none border-none outline-none w-[500px] text-xl"  />
+        <button>
+          <IoMdSearch size={24}/>
+        </button>
       </div>
       <div className="px-5 mt-6">
         <Card className="p-0">
