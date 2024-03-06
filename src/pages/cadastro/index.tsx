@@ -46,7 +46,6 @@ export const Cadastro = () => {
                 .catch(function (error) {
                     console.error(error as AxiosError);
                 });
-            ;
 
             toast.success("Cadastro efetuado com sucesso! ✅")
             setEmail('')
@@ -66,7 +65,7 @@ export const Cadastro = () => {
                 </div>
             </div>
 
-            <div className="registrar-right w-full md:w-1/2 flex items-center justify-center flex-col">
+            <div className="registrar-right w-full h-screen overflow-hidden md:w-1/2 flex items-center justify-center flex-col">
                 <div className="img-logo">
                     <img src={logo} alt="logo 704apps" className="w-40 mt-5" />
                 </div>
