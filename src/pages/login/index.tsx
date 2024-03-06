@@ -123,7 +123,7 @@ export const Login = () => {
                   Esqueceu a senha?
                 </p>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
+              <DialogContent className="rounded-md w-[80%] sm:max-w-md">
                 <DialogHeader>
                   <DialogTitle>Recuperação de senha</DialogTitle>
                   <DialogDescription>
