@@ -13,7 +13,7 @@ export const Coworking = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/coworkings/${params.id}`)
+      .get(`https://api-backend-teste.vercel.app/coworkings/${params.id}`)
       .then((response) => {
         setCoworking(response.data);
       })

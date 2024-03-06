@@ -15,7 +15,7 @@ export const Home = () => {
     const [data, setData] = useState<Coworking[]>([]);
     useEffect(() => {
         axios
-        .get<Coworking[]>("http://localhost:3000/coworkings")
+        .get<Coworking[]>("https://api-backend-teste.vercel.app/coworkings")
         .then((resp) => {
                 setData(resp.data);
             })

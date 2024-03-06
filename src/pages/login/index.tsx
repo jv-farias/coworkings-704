@@ -16,7 +16,7 @@ export const Login = () => {
 
     const submitLogin = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/users");
+            const response = await axios.get("https://api-backend-teste.vercel.app/users");
             if (login === response.data[2].email && senha === response.data[2].password) {
                 console.log('deu certo')
                 window.location.href = '/home'

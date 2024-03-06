@@ -35,7 +35,7 @@ export const Cadastro = () => {
             toast.error("As senhas devem coincidir")
         } else {
 
-            await axios.post('http://localhost:3000/users', {
+            await axios.post('https://api-backend-teste.vercel.app/users', {
                 nome,
                 email,
                 password,
