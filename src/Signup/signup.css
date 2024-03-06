@@ -1,0 +1,135 @@
+.registrar {
+    background: rgb(43, 115, 186);
+    background: radial-gradient(circle, rgba(43, 115, 186, 1) 0%, rgba(29, 72, 114, 1) 100%);
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.registrar-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55vw;
+    height: 100%;
+    background-color: white;
+}
+
+.img-coworking img {
+    width: 550px;
+    border-radius: 20px;
+}
+
+.headline {
+    padding-top: 22px;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+
+.registrar-right {
+    width: 45vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulario-registrar {
+    color: white;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        width: 400px;
+        height: 50px;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        padding-left: 25px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    label {
+        padding-bottom: 10px;
+    }
+
+    .button-submit {
+        width: 400px;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        background-color: white;
+        color: #042a51;
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #042a51;
+        color: white;
+    }
+
+    .fazer-login {
+        text-align: center;
+        color: white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .link-registrar {
+            color: rgb(63, 181, 255);
+        }
+    }
+}
+
+@media (max-width: 975px) {
+    .registrar-left {
+        display: none;
+    }
+
+    .registrar-right {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .formulario-registrar {
+        input {
+            width: 350px;
+        }
+
+        .button-submit {
+            width: 350px;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .formulario-registrar {
+        input {
+            width: 270px;
+        }
+
+        .button-submit {
+            width: 270px;
+        }
+    }
+}
+
+@media (max-width: 295px) {
+    .formulario-registrar {
+        input {
+            width: 240px;
+        }
+
+        .button-submit {
+            width: 240px;
+        }
+    }
+}

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "coworkings": [
+=======
+  "salas": [
+>>>>>>> ad91a6a71f527cca4413e85beb3c7bb3fbc85ec5
     {
       "id": "1",
       "name": "Sala de Reunião",
@@ -133,7 +137,11 @@
     {
       "id": "6",
       "name": "Sala de Criatividade",
+<<<<<<< HEAD
       "description": "Um espaço inspirador para brainstorming e desenvolvimento de ideias.",
+=======
+      "description": "Um espaço inspirador para brainstorming e desenvolvimento.",
+>>>>>>> ad91a6a71f527cca4413e85beb3c7bb3fbc85ec5
       "image": "https://s2.glbimg.com/krVOQo-_iRYLKE2Uvn1Ro1R5ZoE=/620x455/e.glbimg.com/og/ed/f/original/2018/10/15/poe-no-mapa-zetteler-zetteler-sella-concept-reproducao_8.jpg",
       "hours": [
         {
@@ -209,6 +217,7 @@
       ]
     }
   ],
+<<<<<<< HEAD
   "users": [
     {
       "id": "7024",
@@ -225,6 +234,27 @@
     {
       "id": "b284",
       "nome": "João VItor",
+=======
+  "usuarios": [
+    {
+      "id": "9419"
+    },
+    {
+      "id": "e3e4",
+      "nome": "hitalo",
+      "email": "hitalo@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "1e4b",
+      "nome": "João Vitor Rodrigues Farias",
+      "email": "joaovitorfarias12345678910@gmail.com.br",
+      "password": "12345678"
+    },
+    {
+      "id": "6e8e",
+      "nome": "Teste",
+>>>>>>> ad91a6a71f527cca4413e85beb3c7bb3fbc85ec5
       "email": "teste@gmail.com",
       "password": "123456789"
     }

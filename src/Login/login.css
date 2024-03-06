@@ -1,0 +1,252 @@
+.login {
+    background: rgb(43,115,186);
+    background: radial-gradient(circle, rgba(43,115,186,1) 0%, rgba(29,72,114,1) 100%);
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.nova-senha {
+   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #042a51;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 1.5rem;
+
+    input {
+        width: 350px;
+        height: 65px;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        padding-left: 25px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+    
+    .buttonEnviar {
+        width: 350px;
+        height: 55px;
+        font-size: 18px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        background-color: white;
+        color: #042a51;
+        transition: 0.3s ease;
+    }
+
+    .buttonEnviar:hover {
+        background-color: #0054a7;
+        color: white;
+    }
+    
+    h1 {
+        color: white;
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+}
+
+.fundo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+}
+.login-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55vw;
+    height: 100%;
+    background-color: white;
+}
+
+.login-left img {
+    width: 500px;
+}
+
+.login-right {
+
+    width: 45vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    form {
+        color: white;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.img-logo img {
+    width: 170px;
+    margin-top: 20px;
+}
+
+.formulario-login {
+
+    input {
+        width: 400px;
+        height: 65px;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        padding-left: 25px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+    
+    .buttonLogin {
+        width: 400px;
+        height: 55px;
+        font-size: 18px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        background-color: white;
+        color: #042a51;
+        transition: 0.3s ease;
+    }
+
+    .buttonLogin:hover {
+        background-color: #042a51;
+        color: white;
+    }
+
+    .email-login, .email-senha {
+        padding-bottom: 10px;
+    }
+
+    .esqueceu-senha {
+        width: max-content;
+        align-self: flex-end;
+        color: white;
+        padding-top: 1rem;
+    }
+
+    .criar-conta {
+        text-align: center;
+        color: white;
+        margin-top: 100px;
+
+        .link-login {
+            color: rgb(63, 181, 255);
+        }
+    }
+
+}
+
+@media (max-width: 975px) {
+    .login-left {
+        display: none;
+    }
+
+    .login-right {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .formulario-login {
+        input {
+            width: 350px;
+        }
+
+        .buttonLogin {
+            width: 350px;
+        }
+    }
+    .nova-senha {
+        input {
+            width: 300px;
+            height: 50px;
+        }
+        .buttonEnviar {
+            width: 300px;
+            height: 45px;
+        }
+
+        h1 {
+            font-size: 20px
+        }
+
+    }
+}
+
+@media (max-width: 370px) {
+    .formulario-login {
+        input {
+            width: 270px;
+        }
+
+        .buttonLogin {
+            width: 270px;
+        }
+        
+    }
+    .nova-senha {
+        input {
+            width: 260px;
+            height: 50px;
+        }
+        .buttonEnviar {
+            width: 260px;
+            height: 45px;
+        }
+
+        h1 {
+            font-size: 20px
+        }
+
+    }
+
+}
+
+@media (max-width: 295px) {
+    .formulario-login {
+        input {
+            width: 240px;
+        }
+
+        .buttonLogin {
+            width: 240px;
+        }
+    }
+
+    .nova-senha {
+        input {
+            width: 200px;
+            height: 40px;
+            padding-left: 15px;
+        }
+        .buttonEnviar {
+            width: 200px;
+            height: 40px;
+        }
+
+        h1 {
+            font-size: 18px
+        }
+
+    }
+}
