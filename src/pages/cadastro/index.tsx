@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import fotoCoworking2 from "../../assets/coworking2.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios, { Axios, AxiosError } from "axios";
+import axios, { AxiosError } from "axios";
 
 export const Cadastro = () => {
 
