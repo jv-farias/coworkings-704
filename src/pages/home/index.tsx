@@ -60,7 +60,6 @@ export const Home = () => {
                 {data.map((item) => (
                     <CardItem
                         description={item.description}
-                        hours={item.hours}
                         id={item.id}
                         imageUrl={item.image}
                         name={item.name}
