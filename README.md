@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# Gestão de Salas para Coworking
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao projeto! Esta é uma aplicação para gerenciar salas de reunião. Nosso foco é na simplicidade, minimalismo e acessibilidade para facilitar a gestão das salas e garantir uma ótima experiência para os usuários.
 
-Currently, two official plugins are available:
+## Funcionalidades Principais
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Visualização de Salas:** Veja todas as salas disponíveis, com suas respectivas informações.
+- **Reserva de salas com horários e datas:** Reserve, de acordo com a disponibilidade, a sala à seu desejo.
+- **Gestão de reservas por meio de painel ADMIN**: Tenha o total controle das salas que estão reservadas em sua sede.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<hr/>
 
-- Configure the top-level `parserOptions` property like this:
+## Participantes do Projeto
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- [João Vitor](https://github.com/jv-farias)
+- [Hitalo Albuquerque](https://github.com/HitaloDev)
+- [Gustavo Nepomuceno](https://github.com/Gustavonn07)
+- [Igor Fabiano](https://github.com/igorf08)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Tecnologias Utilizadas
+
+- React
+- TypeScript
+- Tailwind
+- shadcn/ui
+- React Icons
+- MariaDB
+- Node
+- Express
