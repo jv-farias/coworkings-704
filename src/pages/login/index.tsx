@@ -6,6 +6,7 @@ import logo from "../../assets/logo.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
+import { IoCloseSharp } from "react-icons/io5";
 
 export const Login = () => {
     const [modal, setModal] = useState(false);
@@ -48,6 +49,11 @@ export const Login = () => {
         }
     };
 
+    const closePassword = () => {
+            setInput("");
+            setModal(false);
+    }
+
     const cliqueForm = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
     };
@@ -84,7 +90,7 @@ export const Login = () => {
                     </a>
 
                     <p className="criar-conta text-white mt-10">
-                        É novo por aqui?
+                        É novo por aqui?{" "}
                         <Link className="link-login text-blue-400" to="/cadastro">Crie sua conta</Link>
                     </p>
                 </form>
@@ -105,18 +111,19 @@ export const Login = () => {
                         theme="dark"
                     />
 
-                    <div className="fundo-modal" onClick={handleModal}></div>
-                    <div className="nova-senha fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-blue-900 flex flex-col items-center justify-center rounded-lg p-6">
-
-                        <h1 className="text-white pb-4 text-lg">Esqueceu sua senha?</h1>
+                    <div className="fundo-modal" onClick={handleModal}></div>                    
+                    <div className="shadow-lg shadow-gray-700 nova-senha fixed top-1/2 left-1/2 transform -translate-x-1/2 gap-3 -translate-y-1/2 z-50 bg-blue-900 flex flex-col items-center justify-center rounded-lg p-6">
+                        <IoCloseSharp onClick={closePassword} className="text-red-600 text-xl fixed top-3 right-3 hover:cursor-pointer"/>
+                        <h1 className="font-bold text-white p-3 text-lg">Esqueceu sua senha?</h1>
                         <input
                             type="email"
                             placeholder="Digite aqui seu email"
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
-                            className="input-login"
-                        />
-                        <button onClick={handlePassword} className="btn-login">Enviar</button>
+                            className="h-8 rounded-sm border-none outline-none pl-2 mb-2 text-md input-login"
+                        />                        
+                        <button onClick={handlePassword} className="shadow-sm shadow-black text-gray-800 hover:opacity-90 px-1 rounded-sm border text-md bg-white 
+ btn-login">Enviar</button>
                     </div>
                 </div>
             )}
