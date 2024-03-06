@@ -9,7 +9,6 @@ import { SearchIcon } from "lucide-react";
 
 
 
-
 const formSchema = z.object({
     search: z
         .string({
@@ -23,6 +22,7 @@ interface SearchProps {
     defaultValues?: z.infer<typeof formSchema>;
 }
 
+
 const Search = ({ defaultValues }: SearchProps) => {
 
 
@@ -31,8 +31,6 @@ const Search = ({ defaultValues }: SearchProps) => {
         defaultValues,
     });
 
-
-
     return (
         <div className="flex items-center gap-2">
             <Form {...form}>
@@ -40,12 +38,11 @@ const Search = ({ defaultValues }: SearchProps) => {
                     <FormField
                         control={form.control}
                         name="search"
-                        render={({ field }) => (
+                        render={() => (
                             <FormItem className="w-full">
                                 <FormControl>
-                                    <Input placeholder="Busque por uma sala..." {...field} />
+                                    <Input placeholder="Busque por uma sala..."/>
                                 </FormControl>
-
                                 <FormMessage />
                             </FormItem>
                         )}
