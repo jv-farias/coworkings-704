@@ -6,7 +6,6 @@ Bem-vindo ao projeto! Esta é uma aplicação para gerenciar salas de reunião. 
 
 - **Visualização de Salas:** Veja todas as salas disponíveis, com suas respectivas informações.
 - **Reserva de salas com horários e datas:** Reserve, de acordo com a disponibilidade, a sala à seu desejo.
-- **Gestão de reservas por meio de painel ADMIN**: Tenha o total controle das salas que estão reservadas em sua sede.
 
 
 <hr/>
