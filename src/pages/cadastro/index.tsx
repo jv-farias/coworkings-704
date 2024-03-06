@@ -72,7 +72,7 @@ export const Cadastro = () => {
                 </div>
                 <h1 className="pt-5 pb-2 text-white text-lg font-semibold">Crie sua conta</h1>
                 <form className="formulario-registrar flex flex-col items-center justify-center" onSubmit={handleClickForm}>
-                    <div className="flex flex-col " >
+                    <div className="flex flex-col" >
                         <label className="text-white pb-1">Nome</label>
                         <input
                             type="text"
@@ -120,7 +120,7 @@ export const Cadastro = () => {
                     hover:bg-blue-300" onClick={handleClickForm}>Criar Conta</button>
 
                     <p className="text-white mt-5">
-                        Já possui conta? <Link className="text-blue-400" to="/login">Clique aqui!</Link>
+                        Já possui conta? <Link className="text-blue-400" to="/login">Clique aqui</Link>
                     </p>
                     <ToastContainer
                         position="top-right"
