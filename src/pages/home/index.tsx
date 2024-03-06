@@ -44,7 +44,7 @@ const Home = () => {
   // Função para filtrar os dados com base no termo de pesquisa
   useEffect(() => {
     const filtered = data.filter((item) =>
-      item.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
+      item.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase().trim())
     );
     setFilteredData(filtered);
   }, [debouncedSearchTerm, data]);
