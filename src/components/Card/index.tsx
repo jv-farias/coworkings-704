@@ -1,18 +1,15 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
-import { Hour } from "@/pages/home/types";
-
 
 interface CardItemProps {
     id: number
     name: string
     description: string
     imageUrl: string
-    hours: Hour[]
 }
 
-export const CardItem = ({ id, name, description, imageUrl, hours }: CardItemProps) => {
+export const CardItem = ({ id, name, description, imageUrl}: CardItemProps) => {
 
     return (
         <Card key={id} className="bg-neutral-50 border-2 border-zinc-200 min-w-[300px] max-w-[300px] rounded-2xl mt-4">
@@ -22,12 +19,6 @@ export const CardItem = ({ id, name, description, imageUrl, hours }: CardItemPro
                         src={imageUrl}
                         className="rounded-t-xl w-full object-cover"
                         alt={name} />
-                </div>
-                <div className="flex justify-center items-center gap-[0.200rem] flex-wrap mt-1" >
-                    {hours.map((hour, index) => (
-                        <Button
-                            variant="default" key={index}>{hour.time}</Button>
-                    ))}
                 </div>
                 <div className="px-2 pb-3">
                     <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">{name}</h2>
