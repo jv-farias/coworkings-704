@@ -63,13 +63,13 @@ export const Login = () => {
     <div className="bg-gradient-to-b from-blue-700 to-blue-900 min-h-screen flex relative">
       <div className="h-[100vh] hidden md:flex items-center justify-center flex-col w-1/2  bg-white">
         <div className="img-coworking">
-          <img src={fotoCoworking} alt="Foto Coworking" className="w-80" />
+          <img src={fotoCoworking} alt="Foto Coworking" className="max-w-lg" />
         </div>
       </div>
 
       <div className="login-right w-full md:w-1/2 flex items-center justify-center flex-col">
         <div className="img-logo">
-          <img src={logo} alt="logo 704apps" className="w-60 mt-5 mb-20" />
+          <img src={logo} alt="logo 704apps" className="w-60 mt-5 mb-10" />
         </div>
         <form
           className="flex flex-col items-center justify-center"
