@@ -1,4 +1,4 @@
-import { HomeIcon, LogInIcon, MenuIcon } from "lucide-react";
+import { HomeIcon, LogInIcon, MenuIcon, UserPlus } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
@@ -21,8 +21,23 @@ export const Header = () => {
 
                     <SheetContent>
                         <SheetHeader>
-                            <SheetTitle>Olá, faça seu login!</SheetTitle>
+                            <SheetTitle>Selecione uma opção:</SheetTitle>
                             <SheetDescription className="flex flex-col gap-3" >
+                                <div className="flex flex-col gap-3 ">
+                                    <Button variant="outline" className="justify-start" asChild>
+                                        <a href="/">
+                                            <HomeIcon size={18} className="mr-2" />
+                                            Início
+                                        </a>
+                                    </Button>
+                                <div className="flex flex-col gap-3 ">
+                                    <Button variant="outline" className="justify-start" asChild>
+                                        <a href="/cadastro">
+                                            <UserPlus size={18} className="mr-2" />
+                                            Cadastre-se
+                                        </a>
+                                    </Button>
+                                </div>
                                 <div className="flex flex-col gap-3 ">
                                     <Button variant="outline" className="justify-start" asChild>
                                         <a href="/login">
@@ -31,13 +46,6 @@ export const Header = () => {
                                         </a>
                                     </Button>
                                 </div>
-                                <div className="flex flex-col gap-3 ">
-                                    <Button variant="outline" className="justify-start" asChild>
-                                        <a href="/">
-                                            <HomeIcon size={18} className="mr-2" />
-                                            Início
-                                        </a>
-                                    </Button>
                                 </div>
                             </SheetDescription>
                         </SheetHeader>
