@@ -7,9 +7,6 @@ import axios from "axios"
 import { useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
 
-
-
-
 export const AdminLogin = () => {
 
     const [input, setInput] = useState<any>("");
@@ -109,8 +106,6 @@ export const AdminLogin = () => {
                         </Dialog>
                     </div>
                 </div>
-
-
                 <div className="w-full" >
                     <Button className="w-full" type="submit" onClick={submitLogin} >Fazer Login</Button>
                 </div>
