@@ -1,3 +1,4 @@
+import { ReactNode } from "react"
 
   export interface Coworking {
     id: number
@@ -8,6 +9,7 @@
   }
   
   export interface Hour {
+    description: ReactNode
     time: string
   }
   
