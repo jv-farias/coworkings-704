@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { Hour } from "@/pages/home/types";
@@ -31,7 +32,9 @@ export const CardItem = ({ id, name, description, imageUrl, hours }: CardItemPro
                 <div className="px-2 pb-3">
                     <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">{name}</h2>
                     <p className="text-sm text-gray-800 overflow-hidden text-wrap">{description}</p>
-                    <Button variant="secondary" className="bg-zinc-200 w-full mt-3">Reservar</Button>
+                    <Link to={`/coworking/${id}`}>
+                        <Button variant="secondary" className="bg-zinc-200 w-full mt-3">Reservar</Button>
+                    </Link>
                 </div>
             </CardContent>
         </Card>
