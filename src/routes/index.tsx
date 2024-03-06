@@ -3,7 +3,7 @@ import { Coworking } from "@/pages/coworking"
 import { Home } from "@/pages/home"
 import { Login } from "@/pages/login"
 import { Navigate, Route, Routes } from "react-router-dom"
-
+//
 export const AppRoutes = () => {
     return (
         <Routes>
