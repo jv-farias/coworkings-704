@@ -52,12 +52,15 @@ export const Home = () => {
                     </CardHeader>
                 </Card>
             </div>
-            <h1 className="px-5 mt-6 font-bold text-sm" >RECOMENDADOS</h1>
-            <div className="p-6 gap-4 mt-2 px-5 flex flex-wrap justify-evenly overflow-x-auto [&::-webkit-scrollbar]:hidden " >
+            <h1 className="px-5 mt-6 font-bold text-sm" >RECOMENDADOS</h1>  
+            <div className=" flex px-5 gap-4 
+            lg:flex-wrap lg:justify-evenly lg:gap-1
+            
+            overflow-x-auto [&::-webkit-scrollbar]:hidden :flex-nowrap" >
                 {data.map((item) => (
                     <CardItem
                         description={item.description}
-                        hours={item.hours} // Corrigido para 'hours'
+                        hours={item.hours}
                         id={item.id}
                         imageUrl={item.image}
                         name={item.name}
