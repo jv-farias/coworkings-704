@@ -107,17 +107,17 @@ export const Login = () => {
           <div className="cursor-pointer">
             <Dialog>
             <ToastContainer
-                        position="top-right"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="dark"
-                    />
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
               <DialogTrigger asChild>
                 <p className="font-semibold text-white text-xl mt-5">
                   Esqueceu a senha?
@@ -145,7 +145,7 @@ export const Login = () => {
                 </div>
 
                 <DialogFooter className="sm:justify-end">
-                  <Button onClick={handlePassword} type="submit" className="w-full">Enviar</Button>
+                  <Button onClick={handlePassword} type="submit" className="w-full bg-[#1E3E97] hover:bg-[#2e4ca0]">Enviar</Button>
                 </DialogFooter>
               </DialogContent>
             </Dialog>
