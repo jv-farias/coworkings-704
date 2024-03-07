@@ -61,7 +61,7 @@ const Home = () => {
           placeholder="Procure uma sala..."
           value={searchTerm}
           onChange={handleSearch}
-          className="border border-gray-500 rounded-md px-3 py-2 w-2/2 placeholder:font-bold placeholder-gray-500 focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out hover:border-blue-300"/>
+          className="border border-gray-500 rounded-md px-3 py-2 w-2/2 placeholder:font-bold placeholder-gray-500 focus:outline-none focus:border-blue-500 transition duration-400 ease-in-out hover:border-blue-300"/>
       </div>
       <div className="px-5 mt-6">
         <Card className="p-0">
