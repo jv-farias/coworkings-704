@@ -55,13 +55,13 @@ const Home = () => {
   return (
     <div className="pb-5 bg-zinc-50">
       <Header />
-      <div className="px-5 mt-6">
+      <div className="px-5 mt-6 relative">
         <input
           type="text"
           placeholder="Procure uma sala..."
           value={searchTerm}
           onChange={handleSearch}
-          className="border border-gray-500 rounded-md px-3 py-2 w-2/2 placeholder:font-bold"
+          className="pl-2 border border-gray-300 rounded-md py-2 w-2/12 placeholder-gray-500 focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out hover:border-blue-300"
         />
       </div>
       <div className="px-5 mt-6">
