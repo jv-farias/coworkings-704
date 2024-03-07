@@ -34,7 +34,7 @@ const Home = () => {
       .get<Coworking[]>("https://api-backend-teste.vercel.app/coworkings")
       .then((resp) => {
         setData(resp.data);
-        setFilteredData(resp.data); // Inicialmente, os dados filtrados são os mesmos que os dados recebidos
+        setFilteredData(resp.data);
       })
       .catch((error: AxiosError) => {
         console.error(error);
